@@ -1,0 +1,17 @@
+#avatarImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mainName {
+  text-align: center; 
+}
+
+header {
+  background-color: #d4ae61;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  height: 400px;
+  width: 100%;
+  margin-top: 120px;
+}
