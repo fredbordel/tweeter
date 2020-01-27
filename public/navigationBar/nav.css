@@ -1,0 +1,29 @@
+#logo {
+  font-family: 'Bungee', cursive;
+  font-size: 1.75em;
+ }
+
+ #createNewTweet {
+   font-family: 'Source Sans Pro', sans-serif;
+   font-size: 1.25em;
+ }
+
+#navbar {
+  background: #4056A1;
+  color:#FFF;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+
+
+
+
+
