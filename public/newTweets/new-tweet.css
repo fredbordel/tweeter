@@ -1,0 +1,34 @@
+#textArea {
+  border: none;
+  border-bottom: 3px solid rgb(82, 69, 69);
+  background-color: #d8c6a5;
+  display: block;
+  width: 80%;
+}
+
+.new-tweet {
+  background-color: #d8c6a5;
+  margin: 0;
+}
+
+.form {
+  display: block;
+  margin-left: 150px;
+  padding-bottom: 10px;
+}
+
+.inputAndFeedback {
+  font-family: 'Bungee', cursive;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+#tweetButton {
+background-color:#4056A1;
+color: white;
+}
+
+.counter {
+  margin-right: 20%;
+}
