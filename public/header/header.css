@@ -8,7 +8,7 @@
   text-align: center; 
 }
 
-header {
+.mainHeader {
   background-color: #d4ae61;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
   height: 400px;

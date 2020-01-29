@@ -13,14 +13,25 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- External CSS for Navigation bar -->
+    <!-- CSS for Navigation bar -->
     <link rel="stylesheet" href="/navigationBar/nav.css" />
+
+    <!-- CSS for Header -->
+    <link rel="stylesheet" href="/header/header.css" />
+
+     <!-- CSS for Tweet form -->
+     <link rel="stylesheet" href="/newTweets/new-tweet.css" />
+
+     <!-- CSS for public Tweets -->
+     <link rel="stylesheet" href="/publicTweets/publicTweets.css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -30,21 +41,51 @@
       <span id="createNewTweet"><b>Write</b> a new tweet</span>
     </nav>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-    <p>Respect forming clothes do in he. Course so piqued no an by appear. Themselves reasonable pianoforte so motionless he as difficulty be. Abode way begin ham there power whole. Do unpleasing indulgence impossible to conviction. Suppose neither evident welcome it at do civilly uncivil. Sing tall much you get nor. 
-
-        In up so discovery my middleton eagerness dejection explained. Estimating excellence ye contrasted insensible as. Oh up unsatiable advantages decisively as at interested. Present suppose in esteems in demesne colonel it to. End horrible she landlord screened stanhill. Repeated offended you opinions off dissuade ask packages screened. She alteration everything sympathize impossible his get compliment. Collected few extremity suffering met had sportsman. 
-        
-        Paid was hill sir high. For him precaution any advantages dissimilar comparison few terminated projecting. Prevailed discovery immediate objection of ye at. Repair summer one winter living feebly pretty his. In so sense am known these since. Shortly respect ask cousins brought add tedious nay. Expect relied do we genius is. On as around spirit of hearts genius. Is raptures daughter branched laughter peculiar in settling. 
-        
-        Was justice improve age article between. No projection as up preference reasonably delightful celebrated. Preserved and abilities assurance tolerably breakfast use saw. And painted letters forming far village elderly compact. Her rest west each spot his and you knew. Estate gay wooded depart six far her. Of we be have it lose gate bred. Do separate removing or expenses in. Had covered but evident chapter matters anxious. </p>
-
-        <p>Respect forming clothes do in he. Course so piqued no an by appear. Themselves reasonable pianoforte so motionless he as difficulty be. Abode way begin ham there power whole. Do unpleasing indulgence impossible to conviction. Suppose neither evident welcome it at do civilly uncivil. Sing tall much you get nor. 
-
-In up so discovery my middleton eagerness dejection explained. Estimating excellence ye contrasted insensible as. Oh up unsatiable advantages decisively as at interested. Present suppose in esteems in demesne colonel it to. End horrible she landlord screened stanhill. Repeated offended you opinions off dissuade ask packages screened. She alteration everything sympathize impossible his get compliment. Collected few extremity suffering met had sportsman. 
-
-Paid was hill sir high. For him precaution any advantages dissimilar comparison few terminated projecting. Prevailed discovery immediate objection of ye at. Repair summer one winter living feebly pretty his. In so sense am known these since. Shortly respect ask cousins brought add tedious nay. Expect relied do we genius is. On as around spirit of hearts genius. Is raptures daughter branched laughter peculiar in settling. 
-
-Was justice improve age article between. No projection as up preference reasonably delightful celebrated. Preserved and abilities assurance tolerably breakfast use saw. And painted letters forming far village elderly compact. Her rest west each spot his and you knew. Estate gay wooded depart six far her. Of we be have it lose gate bred. Do separate removing or expenses in. Had covered but evident chapter matters anxious. </p>
+    <header class="mainHeader">
+        <div>
+            <img id="avatarImage" src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+            <h2 id="mainName">Fred Bordeleau</h2>
+        </div>
+    </header>
+    <main class="container">
+        <section class="new-tweet">
+            <form class="form" action="/tweets" method="POST">
+              <textarea id="textArea" name="text" placeholder="What are you humming about?"></textarea>
+              <div class="inputAndFeedback">
+                  <input id="tweetButton"type="submit" value="Tweet">
+                  <span class="counter">140</span>
+              </div>
+            </form>
+          </section>
+          <article id = 'tweetsContainer' class="publicTweets">
+              <div class="boxedTweet">
+                  <header class="userInformation">
+                    <div id ='avatarInfo'>
+                      <img src= "https://i.imgur.com/73hZDYK.png"> 
+                      <span id='name'>Fred</span>
+                    </div>
+                    <span id='handler'>
+                      @Fred
+                    </span>
+                  </header>
+              <p id='tweetLine'>
+                CECI EST UN FAKE TWEET!!
+              </p>
+                  <footer class='postInfoAndIcons'>
+                    <span id='timeOfTweet'>
+                      Time of tweet
+                    </span>
+                    <div id='threeIcons'>
+                      icon1
+                      icon2
+                      icon3
+                    </div>
+                  </footer>
+              </div>
+            </article>
+    </main>
   </body>
 </html>

@@ -1,0 +1,64 @@
+#avatarInfo {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+#handler {
+  padding-right: 10px;
+}
+
+#name {
+  padding-left: 10px
+}
+
+#timeOfTweet {
+  padding-left: 1em;
+}
+
+#threeIcons {
+  padding-right: 1em;
+}
+
+.userInformation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.postInfoAndIcons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.publicTweets {
+  background-color: #e9dac1;
+  border: 4px solid #e9dac1;
+  border-bottom-width: 1.5em;
+}
+
+.boxedTweet {
+border: 4px solid rgba(38, 17, 10, 0.673);
+margin-left: 6em;
+margin-right: 6em;
+margin-bottom: 1.5em;
+margin-top: 1em;
+padding-top: 0.5em;
+padding-bottom: 0;
+
+}
+
+.boxedTweet:hover {
+  box-shadow: 10px 10px #cfc1b2;
+}
+
+#tweetLine {
+  border-bottom: 4px solid rgba(38, 17, 10, 0.673);
+  padding-top: 1.5em;
+  
+  margin-left: 1em;
+  margin-right: 1em;
+
+}
+
