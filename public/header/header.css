@@ -6,12 +6,15 @@
 
 #mainName {
   text-align: center; 
+  margin: 0;
 }
 
 .mainHeader {
   background-color: #d7b675;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-  height: 400px;
-  width: 100%;
-  margin-top: 120px;
+  height: 15em;
+  width: 25em;
+  margin-top: 8em;
+  margin-left: 2em;
+  padding-top: 1em;
 }
