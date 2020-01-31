@@ -1,16 +1,25 @@
+/*_________________________________
+ * STYLING CREATING NEW TWEET BLOC|
+ *________________________________|
+ */
+
+ 
 #textArea {
   border: none;
   border-bottom: 0.2em solid rgba(38, 17, 10, 0.673);
   background-color: #fcecd1;
-  display: block;
   margin-top: 0.9em;
   width: 22em;
 }
 
 .new-tweet {
+  display: flex;
   background-color: #fcecd1;
   width: 100%;
   padding-top: 0.2em;
+  padding-left: 2.1em;
+  overflow: hidden;
+  outline: none;
 }
 
 
@@ -38,7 +47,7 @@ box-shadow: 2px 2px #4056A1;
 }
 
 .counter {
-  margin-right: 9.7em;
+  margin-left: auto;
 }
 
 .counter.counterUnderZero {

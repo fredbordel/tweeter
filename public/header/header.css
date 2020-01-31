@@ -1,3 +1,8 @@
+/*__________________________________________
+ * STYLING HEADER WITH MAIN AVATAR AND NAME|
+ *_________________________________________|
+ */
+
 #avatarImage {
   display: block;
   margin-left: auto;
@@ -17,4 +22,9 @@
   margin-top: 8em;
   margin-left: 2em;
   padding-top: 1em;
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: row;
 }

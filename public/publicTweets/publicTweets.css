@@ -1,3 +1,8 @@
+/*_______________________________________
+ * STYLING PUBLISHED TWEETS|
+ *______________________________________|
+ */
+
 #avatarInfo {
   display: flex;
   justify-content: space-between;
@@ -26,7 +31,7 @@
   padding-right: 1em;
 
 }
-
+ 
 i {
   margin-left: 0.5em;
 }

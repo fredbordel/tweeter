@@ -1,20 +1,10 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
-
- 
 
 body {
   color: #545149;
@@ -33,7 +23,30 @@ body {
   margin-top: 8em;
 }
 
-.mainDiv {
-  display: flex;
-  flex-direction: row;
+/*_______________________________________
+ * STYLING RESPONSIVE DESIGN OF TWEETER|
+ *______________________________________|
+ */
+
+@media only screen and (max-width: 1135px) {
+
+  .container {
+    margin-top: 0.5em;
+
+  }
+  .mainDiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainHeader {
+    margin: 0;
+    width: 100%;
+  }
+  #navbar {
+    background-color: #d7b675;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+    position: static;
+    
+  }
 }

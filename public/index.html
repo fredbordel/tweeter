@@ -1,8 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -20,14 +23,14 @@
     <!-- CSS for Header -->
     <link rel="stylesheet" href="/header/header.css" />
 
-     <!-- CSS for Tweet form -->
-     <link rel="stylesheet" href="/newTweets/new-tweet.css" />
+    <!-- CSS for Tweet form -->
+    <link rel="stylesheet" href="/newTweets/new-tweet.css" />
 
-     <!-- CSS for public Tweets -->
-     <link rel="stylesheet" href="/publicTweets/publicTweets.css" />
+    <!-- CSS for public Tweets -->
+    <link rel="stylesheet" href="/publicTweets/publicTweets.css" />
 
-       <!-- CSS for Error Messages -->
-       <link rel="stylesheet" href="/errorMessages/errorMessages.css" />
+    <!-- CSS for Error Messages -->
+    <link rel="stylesheet" href="/errorMessages/errorMessages.css" />
 
     <!-- TimeStamp Module -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
@@ -41,8 +44,9 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
+
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top nav bar -->
     <nav id="navbar">
       <span id="logo">tweeter</span>
       <div class="actionAndButton">
@@ -50,8 +54,8 @@
       <i id = "arrowButton" class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <!-- Page-specific (main) content here -->
     <div class="mainDiv">
+      <!-- Main avatar + name bloc  -->
     <header class="mainHeader">
         <div>
             <img id="avatarImage" src="/images/profile-hex.png"> 
@@ -61,6 +65,7 @@
             <h2 id="mainName">Fred Bordeleau</h2>
         </div>
     </header>
+    <!-- Hidden message errors (appear when error)  -->
     <main class="container">
         <section class="hidden" id="errorNothing">
          <p id="msgNothing"><i class="fas fa-exclamation-triangle"></i> If you want us to post your tweet, you have to write something first...</p>
@@ -68,6 +73,7 @@
       <section  class="hidden" id="errorTooLong">
       <p id="msgTooLong"><i class="fas fa-exclamation-triangle"></i> Sorry, this is wayyyyyyyyyyyy too long.</p>
       </section>
+      <!-- Writing new tweet bloc  -->
         <section class="new-tweet">
             <form class="form" action="/tweets" method="POST">
               <textarea id="textArea" name="text" placeholder="What are you humming about?"></textarea>
@@ -77,40 +83,10 @@
               </div>
             </form>
           </section>
+          <!-- Posted tweets bloc -->
           <article id = 'tweetsContainer' class="publicTweets">
           </article>
     </main>
   </div>
   </body>
 </html>
-
-
-
-
-<!-- 
-
-     <div class="boxedTweet">
-                  <header class="userInformation">
-                    <div id ='avatarInfo'>
-                      <img src= "https://i.imgur.com/73hZDYK.png"> 
-                      <span id='name'>Fred</span>
-                    </div>
-                    <span id='handler'>
-                      @Fred
-                    </span>
-                  </header>
-              <p id='tweetLine'>
-                CECI EST UN FAKE TWEET!!
-              </p>
-                  <footer class='postInfoAndIcons'>
-                    <span id='timeOfTweet'>
-                      Time of tweet
-                    </span>
-                    <div id='threeIcons'>
-                        <i class="fas fa-share-square"></i>
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-comment"></i>
-                    </div>
-                  </footer>
-              </div>
--->
