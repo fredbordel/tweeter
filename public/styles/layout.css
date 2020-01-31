@@ -18,14 +18,15 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #fcecd1;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 
 .container {
-  background-color: #f4f1ec;
+  background-color: #d7b675;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
   width: 90%;
   margin: 0;
   margin-left: 5%;

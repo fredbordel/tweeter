@@ -9,6 +9,7 @@
 
     <!-- External fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,400,400i,700,700i&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6ba3f5c144.js" crossorigin="anonymous"></script>
     
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -25,6 +26,12 @@
      <!-- CSS for public Tweets -->
      <link rel="stylesheet" href="/publicTweets/publicTweets.css" />
 
+       <!-- CSS for Error Messages -->
+       <link rel="stylesheet" href="/errorMessages/errorMessages.css" />
+
+    <!-- TimeStamp Module -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -38,7 +45,10 @@
     <!-- Top nav bar (fixed) -->
     <nav id="navbar">
       <span id="logo">tweeter</span>
+      <div class="actionAndButton">
       <span id="createNewTweet"><b>Write</b> a new tweet</span>
+      <i id = "arrowButton" class="fas fa-angle-double-down"></i>
+      </div>
     </nav>
     <!-- Page-specific (main) content here -->
     <header class="mainHeader">
@@ -51,6 +61,12 @@
         </div>
     </header>
     <main class="container">
+        <section class="hidden" id="errorNothing">
+         <p id="msgNothing"><i class="fas fa-exclamation-triangle"></i> If you want us to post your tweet, you have to write something first...</p>
+        </section>
+      <section  class="hidden" id="errorTooLong">
+      <p id="msgTooLong"><i class="fas fa-exclamation-triangle"></i> Sorry, this is wayyyyyyyyyyyy too long.</p>
+      </section>
         <section class="new-tweet">
             <form class="form" action="/tweets" method="POST">
               <textarea id="textArea" name="text" placeholder="What are you humming about?"></textarea>
@@ -61,7 +77,17 @@
             </form>
           </section>
           <article id = 'tweetsContainer' class="publicTweets">
-              <div class="boxedTweet">
+          </article>
+    </main>
+  </body>
+</html>
+
+
+
+
+<!-- 
+
+     <div class="boxedTweet">
                   <header class="userInformation">
                     <div id ='avatarInfo'>
                       <img src= "https://i.imgur.com/73hZDYK.png"> 
@@ -79,13 +105,10 @@
                       Time of tweet
                     </span>
                     <div id='threeIcons'>
-                      icon1
-                      icon2
-                      icon3
+                        <i class="fas fa-share-square"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-comment"></i>
                     </div>
                   </footer>
               </div>
-            </article>
-    </main>
-  </body>
-</html>
+-->

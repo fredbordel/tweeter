@@ -1,4 +1,4 @@
-#logo {
+ #logo {
   font-family: 'Bungee', cursive;
   font-size: 1.75em;
  }
@@ -6,6 +6,23 @@
  #createNewTweet {
    font-family: 'Source Sans Pro', sans-serif;
    font-size: 1.25em;
+   margin-left: auto;
+ }
+
+#createNewTweet:hover {
+  cursor: pointer;
+}
+
+ #arrowButton {
+   display: flex;
+   align-self: center;
+   color: rgb(232, 133, 57);
+   transition: all .2s ease-in-out;
+ }
+
+ #arrowButton:hover {
+   transform: scale(1.25);
+   cursor: pointer;
  }
 
 #navbar {
@@ -22,8 +39,10 @@
   padding: 1.5em;
 }
 
-
-
+.actionAndButton {
+  display: flex;
+  flex-direction: column;
+}
 
 
 

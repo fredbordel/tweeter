@@ -1,0 +1,37 @@
+
+#errorTooLong {
+  background-color: #fcecd1;
+  width: 100%;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+#errorNothing {
+  background-color: #fcecd1;
+  width: 100%;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+#msgNothing {
+border: 3px solid red;
+width: 35em;
+margin: auto;
+padding: 1em;
+margin-top: 1em;
+color: red;
+}
+
+
+#msgTooLong {
+  border: 3px solid red;
+  width: 35em;
+  margin: auto;
+  padding: 1em;
+  margin-top: 1em;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
