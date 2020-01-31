@@ -1,4 +1,12 @@
+//_______________________________
+// MANAGING JAVASCRIPT FOR TWEET|
+//______________________________|
+
 $(document).ready(function() {
+
+  //___________________________________________________________
+  // Function that creates HTML tree for each new tweet posted|
+  //__________________________________________________________|
 
   let createTweetElement = function(tweetData) {
   
@@ -32,13 +40,13 @@ $(document).ready(function() {
     let $divOfIcons     = $('<div>').attr('id', 'threeIcons');
 
     //Children of divOfIcons
-    let $iconShare      = $('<i>').addClass('fas fa-share-square')
-    let $iconHeart      = $('<i>').addClass('fas fa-heart')
-    let $iconComment    = $('<i>').addClass('fas fa-comment')
+    let $iconShare      = $('<i>').addClass('fas fa-share-square');
+    let $iconHeart      = $('<i>').addClass('fas fa-heart');
+    let $iconComment    = $('<i>').addClass('fas fa-comment');
 
-  
-  
-    // APPENDING FROM GRAND-CHILDREN TO BOSS
+    //_______________________________________
+    // APPENDING FROM GRAND-CHILDREN TO BOSS|
+    //______________________________________|
 
     $divOfIcons
       .append($iconShare)
@@ -67,13 +75,17 @@ $(document).ready(function() {
   };
 
 
+  //_____________________
   // MANAGING TWEET FEED|
   //____________________|
 
+
+  //Toggle textarea when button is clicked
   $(".actionAndButton").click(function() {
     $(".new-tweet").slideToggle();
   });
 
+  
   const loadOneTweet = function() {
     $.ajax({
       method: 'GET',
@@ -89,6 +101,7 @@ $(document).ready(function() {
   loadOneTweet();
 
 
+  //Managing errors from textarea input (when writing a tweet)
   $(".form").on("submit", function(event) {
     event.preventDefault();
     if (!$('#textArea').val()) {
@@ -106,7 +119,6 @@ $(document).ready(function() {
         data: $('form').serialize()
       })
         .done(loadOneTweet);
-    //.fail(handleCommentLoadErrors);
     }
   });
 
@@ -133,20 +145,6 @@ $(document).ready(function() {
   loadTweets();
 
 
-
-
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227,
-  };
-
   const $tweet = createTweetElement(tweetData);
   $('#tweetsContainer').prepend($tweet);
 });
@@ -154,30 +152,3 @@ $(document).ready(function() {
 
 
 
-/*
-const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-
-  */
