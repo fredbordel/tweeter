@@ -1,4 +1,4 @@
-! [alt text] (https://user-images.githubusercontent.com/54559673/74563264-6afec380-4f3a-11ea-9e34-f044acbf602d.png)
+![alt text] (https://user-images.githubusercontent.com/54559673/74563264-6afec380-4f3a-11ea-9e34-f044acbf602d.png)
 
 # Tweeter Project
 
