@@ -1,3 +1,5 @@
+![logo](/public/screenshots/Capture d’écran, le 2020-02-14 à 14.55.16.png)
+
 # Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.
