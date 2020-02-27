@@ -28,3 +28,31 @@
   display: flex;
   flex-direction: row;
 }
+
+/*_______________________________________
+ * STYLING RESPONSIVE DESIGN OF TWEETER|
+ *______________________________________|
+ */
+
+@media only screen and (max-width: 1135px) {
+
+  .container {
+    margin-top: 0.5em;
+
+  }
+  .mainDiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainHeader {
+    margin: 0;
+    width: 100%;
+  }
+  #navbar {
+    background-color: #d7b675;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+    position: static;
+    
+  }
+}

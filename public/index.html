@@ -1,92 +1,94 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <!-- External fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,400,400i,700,700i&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/6ba3f5c144.js" crossorigin="anonymous"></script>
-    
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- CSS for Navigation bar -->
-    <link rel="stylesheet" href="/navigationBar/nav.css" />
+  <!-- External fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,400,400i,700,700i&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6ba3f5c144.js" crossorigin="anonymous"></script>
 
-    <!-- CSS for Header -->
-    <link rel="stylesheet" href="/header/header.css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- CSS for Tweet form -->
-    <link rel="stylesheet" href="/newTweets/new-tweet.css" />
+  <!-- CSS for Navigation bar -->
+  <link rel="stylesheet" href="/navigationBar/nav.css" />
 
-    <!-- CSS for public Tweets -->
-    <link rel="stylesheet" href="/publicTweets/publicTweets.css" />
+  <!-- CSS for Header -->
+  <link rel="stylesheet" href="/header/header.css" />
 
-    <!-- CSS for Error Messages -->
-    <link rel="stylesheet" href="/errorMessages/errorMessages.css" />
+  <!-- CSS for Tweet form -->
+  <link rel="stylesheet" href="/newTweets/new-tweet.css" />
 
-    <!-- TimeStamp Module -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+  <!-- CSS for public Tweets -->
+  <link rel="stylesheet" href="/publicTweets/publicTweets.css" />
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <!-- CSS for Error Messages -->
+  <link rel="stylesheet" href="/errorMessages/errorMessages.css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+  <!-- TimeStamp Module -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
 
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="./scripts/client.js"></script>
+
+  <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
+</head>
 
 
-  <body>
-    <!-- Top nav bar -->
-    <nav id="navbar">
-      <span id="logo">tweeter</span>
-      <div class="actionAndButton">
+<body>
+  <!-- Top nav bar -->
+  <nav id="navbar">
+    <span id="logo">tweeter</span>
+    <div class="actionAndButton">
       <span id="createNewTweet"><b>Write</b> a new tweet</span>
-      <i id = "arrowButton" class="fas fa-angle-double-down"></i>
-      </div>
-    </nav>
-    <div class="mainDiv">
-      <!-- Main avatar + name bloc  -->
+      <i id="arrowButton" class="fas fa-angle-double-down"></i>
+    </div>
+  </nav>
+  <div class="mainDiv">
+    <!-- Main avatar + name bloc  -->
     <header class="mainHeader">
-        <div>
-            <img id="avatarImage" src="/images/profile-hex.png"> 
-        </div>
-        <br>
-        <div>
-            <h2 id="mainName">Fred Bordeleau</h2>
-        </div>
+      <div>
+        <img id="avatarImage" src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2 id="mainName">Fred Bordeleau</h2>
+      </div>
     </header>
     <!-- Hidden message errors (appear when error)  -->
     <main class="container">
-        <section class="hidden" id="errorNothing">
-         <p id="msgNothing"><i class="fas fa-exclamation-triangle"></i> If you want us to post your tweet, you have to write something first...</p>
-        </section>
-      <section  class="hidden" id="errorTooLong">
-      <p id="msgTooLong"><i class="fas fa-exclamation-triangle"></i> Sorry, this is wayyyyyyyyyyyy too long.</p>
+      <section class="hidden" id="errorNothing">
+        <p id="msgNothing"><i class="fas fa-exclamation-triangle"></i> If you want us to post your tweet, you have to
+          write something first...</p>
+      </section>
+      <section class="hidden" id="errorTooLong">
+        <p id="msgTooLong"><i class="fas fa-exclamation-triangle"></i> Sorry, this is wayyyyyyyyyyyy too long.</p>
       </section>
       <!-- Writing new tweet bloc  -->
-        <section class="new-tweet">
-            <form class="form" action="/tweets" method="POST">
-              <textarea id="textArea" name="text" placeholder="What are you humming about?"></textarea>
-              <div class="inputAndFeedback">
-                  <input id="tweetButton"type="submit" value="Tweet">
-                  <span class="counter">140</span>
-              </div>
-            </form>
-          </section>
-          <!-- Posted tweets bloc -->
-          <article id = 'tweetsContainer' class="publicTweets">
-          </article>
+      <section class="new-tweet">
+        <form class="form" action="/tweets" method="POST">
+          <textarea id="textArea" name="text" placeholder="What are you humming about?"></textarea>
+          <div class="inputAndFeedback">
+            <input id="tweetButton" type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </div>
+        </form>
+      </section>
+      <!-- Posted tweets bloc -->
+      <article id='tweetsContainer' class="publicTweets">
+      </article>
     </main>
   </div>
-  </body>
+</body>
+
 </html>

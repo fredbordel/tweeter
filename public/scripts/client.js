@@ -2,23 +2,23 @@
 // MANAGING JAVASCRIPT FOR TWEET|
 //______________________________|
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   //___________________________________________________________
   // Function that creates HTML tree for each new tweet posted|
   //__________________________________________________________|
 
-  let createTweetElement = function(tweetData) {
-  
+  let createTweetElement = function (tweetData) {
+
     //BOSS
-    let $mainDiv       = $('<div>').addClass('boxedTweet');
+    let $mainDiv = $('<div>').addClass('boxedTweet');
 
 
     //Children of BOSS
-    let $header        = $('<header>').addClass('userInformation');
-    let $par           = $('<p>').attr('id', 'tweetLine');
+    let $header = $('<header>').addClass('userInformation');
+    let $par = $('<p>').attr('id', 'tweetLine');
     $par.text(tweetData.content.text);
-    let $footer        = $('<footer>').addClass('postInfoAndIcons');
+    let $footer = $('<footer>').addClass('postInfoAndIcons');
 
 
     //Children of header
@@ -30,19 +30,19 @@ $(document).ready(function() {
     //Children of divAvatarInfo
     let $imgOfAvatar = $('<img>');
     $imgOfAvatar.attr('src', tweetData.user.avatars);
-    let $spanOfName  = $('<span>').attr('id', 'name');
+    let $spanOfName = $('<span>').attr('id', 'name');
     $spanOfName.text(tweetData.user.name);
 
 
     //Children of footer
     let tweetMoment = moment(tweetData['created_at']).fromNow();
-    let $spanTimePost   = $('<span>').text(tweetMoment).attr('id', 'timeOfTweet');
-    let $divOfIcons     = $('<div>').attr('id', 'threeIcons');
+    let $spanTimePost = $('<span>').text(tweetMoment).attr('id', 'timeOfTweet');
+    let $divOfIcons = $('<div>').attr('id', 'threeIcons');
 
     //Children of divOfIcons
-    let $iconShare      = $('<i>').addClass('fas fa-share-square');
-    let $iconHeart      = $('<i>').addClass('fas fa-heart');
-    let $iconComment    = $('<i>').addClass('fas fa-comment');
+    let $iconShare = $('<i>').addClass('fas fa-share-square');
+    let $iconHeart = $('<i>').addClass('fas fa-heart');
+    let $iconComment = $('<i>').addClass('fas fa-comment');
 
     //_______________________________________
     // APPENDING FROM GRAND-CHILDREN TO BOSS|
@@ -52,15 +52,15 @@ $(document).ready(function() {
       .append($iconShare)
       .append($iconHeart)
       .append($iconComment);
-    
+
     $divAvatarInfo
       .append($imgOfAvatar)
       .append($spanOfName);
-    
+
     $header
       .append($divAvatarInfo)
       .append($spanOfHandler);
-    
+
     $footer
       .append($spanTimePost)
       .append($divOfIcons);
@@ -69,8 +69,8 @@ $(document).ready(function() {
       .append($header)
       .append($par)
       .append($footer);
-    
-    return  $mainDiv;
+
+    return $mainDiv;
 
   };
 
@@ -81,17 +81,17 @@ $(document).ready(function() {
 
 
   //Toggle textarea when button is clicked
-  $(".actionAndButton").click(function() {
+  $(".actionAndButton").click(function () {
     $(".new-tweet").slideToggle();
   });
 
-  
-  const loadOneTweet = function() {
+
+  const loadOneTweet = function () {
     $.ajax({
       method: 'GET',
       url: 'http://localhost:8080/tweets'
     })
-      .done(function(data) {
+      .done(function (data) {
         let newTweet = createTweetElement(data.pop());
         $('#tweetsContainer').prepend(newTweet);
         $('#textArea').val("");
@@ -102,7 +102,7 @@ $(document).ready(function() {
 
 
   //Managing errors from textarea input (when writing a tweet)
-  $(".form").on("submit", function(event) {
+  $(".form").on("submit", function (event) {
     event.preventDefault();
     if (!$('#textArea').val()) {
       $("#errorNothing").removeClass("hidden");
@@ -114,7 +114,7 @@ $(document).ready(function() {
       $("#errorTooLong").addClass("hidden");
       $("#errorNothing").addClass("hidden");
       $.ajax({
-        method:'POST',
+        method: 'POST',
         url: 'http://localhost:8080/tweets',
         data: $('form').serialize()
       })
@@ -122,10 +122,10 @@ $(document).ready(function() {
     }
   });
 
- 
 
 
-  const renderTweets = function(tweets) {
+
+  const renderTweets = function (tweets) {
     for (let eachTweet of tweets) {
       let result = createTweetElement(eachTweet);
       $('#tweetsContainer').prepend(result);
@@ -134,7 +134,7 @@ $(document).ready(function() {
 
 
 
-  const loadTweets = function() {
+  const loadTweets = function () {
     $.ajax({
       method: 'GET',
       url: 'http://localhost:8080/tweets'
@@ -144,9 +144,6 @@ $(document).ready(function() {
 
   loadTweets();
 
-
-  const $tweet = createTweetElement(tweetData);
-  $('#tweetsContainer').prepend($tweet);
 });
 
 
